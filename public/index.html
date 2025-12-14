@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сбор показаний</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <header class="hero">
+            <div>
+                <p class="eyebrow">Система сбора данных</p>
+            </div>
+        </header>
+
+        <main class="layout">
+            <section class="panel" id="auth-panel">
+                <div class="panel-header">
+                    <div>
+                        <p class="eyebrow">Авторизация</p>
+                        <h2>Введите свой логин</h2>
+                    </div>
+                </div>
+                <div class="field-group">
+                    <label for="username-input">Квартира или логин</label>
+                    <input type="text" id="username-input" placeholder="Например, 42" autocomplete="username">
+                </div>
+                <button class="primary" id="login-btn">Перейти к форме</button>
+            </section>
+
+            <section class="panel hidden" id="app-panel">
+                <div class="panel-header">
+                    <div>
+                        <p class="eyebrow" id="user-label"></p>
+                        <h2>Форма по загруженной схеме</h2>
+                    </div>
+                    <div class="actions">
+                        <button class="ghost" id="back-btn">Вернуться</button>
+                        <button class="ghost" id="show-history">История</button>
+                    </div>
+                </div>
+
+                <form id="dynamic-form" class="dynamic-form"></form>
+                <div class="form-actions">
+                    <button class="primary" id="submit-form" type="button">Сохранить показания</button>
+                    <button class="ghost" id="reset-form" type="button">Очистить</button>
+                </div>
+
+                <div id="history" class="history hidden"></div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
